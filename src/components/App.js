@@ -1,18 +1,18 @@
-//import logo from '../images/logo.svg';
 import '../styles/App.scss';
+import { useState } from 'react';
+import Rating from './Rating';
 
 function App() {
-  return (
-    <div className='App'>
-      {/*<img src={logo} className="App-logo" alt="logo" />*/}
+  const [number, setNumber] = useState(0);
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        alias fuga odio odit atque expedita assumenda numquam quidem,
-        voluptatibus facere ullam eos quos iusto beatae sit perspiciatis dolore
-        laudantium minus.
-      </p>
-    </div>
+  const savedValue = (value) => {
+    setNumber(value);
+  };
+
+  return (
+    <>
+      <Rating savedValue={savedValue}></Rating>;
+    </>
   );
 }
 

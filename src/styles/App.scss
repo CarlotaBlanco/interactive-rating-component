@@ -1,1 +1,69 @@
+$dark-blue: hsl(213, 19%, 18%);
+$medium-grey: hsla(216, 12%, 54%, 0.256);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$orange: hsl(25, 97%, 53%);
 
+.modal {
+  background-color: $dark-blue;
+  border-radius: 10px 10px 10px 10px;
+  padding: 1.5rem;
+  &__star-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0;
+    background-color: $medium-grey;
+  }
+  &__title {
+    color: $white;
+  }
+  &__text {
+    color: $light-grey;
+  }
+  .numbers {
+    display: flex;
+    justify-content: space-between;
+    &__circle {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: $medium-grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+      color: $light-grey;
+      &--radio {
+        display: none;
+      }
+    }
+    &__circle:hover {
+      background-color: $light-grey;
+      color: $white;
+    }
+    &__circle:active {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+  &__submit-button {
+    text-transform: uppercase;
+    color: $white;
+    background-color: $orange;
+    width: 100%;
+    border: 0;
+    padding: 5%;
+    margin: 5% 0 2%;
+    border-radius: 99em;
+    letter-spacing: 0.3em;
+  }
+  &__submit-button:active {
+    background-color: $white;
+    color: $orange;
+  }
+  @media all and(min-width:768px) {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+}
