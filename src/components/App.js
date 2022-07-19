@@ -15,7 +15,16 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Rating savedValue={savedValue}></Rating>} />
-        <Route path='/thankyou' element={<Thankyou></Thankyou>} />
+
+        {number !== 0 && (
+          <Route
+            path='/thankyou'
+            element={<Thankyou number={number}></Thankyou>}
+          />
+        )}
+        {number === 0 && (
+          <Route path='*' element={<Rating savedValue={savedValue}></Rating>} />
+        )}
       </Routes>
     </>
   );

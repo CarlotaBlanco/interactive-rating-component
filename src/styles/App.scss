@@ -14,9 +14,11 @@ $orange: hsl(25, 97%, 53%);
     border-radius: 50%;
     border: 0;
     background-color: $medium-grey;
+    margin-bottom: 5%;
   }
   &__title {
     color: $white;
+    margin: 2%;
   }
   &__text {
     color: $light-grey;
@@ -49,21 +51,48 @@ $orange: hsl(25, 97%, 53%);
   }
   &__submit-button {
     text-transform: uppercase;
-    color: $white;
+    text-align: center;
+
     background-color: $orange;
-    width: 100%;
     border: 0;
     padding: 5%;
     margin: 5% 0 2%;
     border-radius: 99em;
     letter-spacing: 0.3em;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
   &__submit-button:active {
     background-color: $white;
-    color: $orange;
+    a {
+      color: $orange;
+    }
   }
+
+  &__thanks {
+    width: 50%;
+    margin: 5%;
+  }
+  &__selection {
+    background-color: $medium-grey;
+    width: 60%;
+    color: $orange;
+    padding: 2%;
+    border-radius: 99em;
+    margin: 5%;
+  }
+
   @media all and(min-width:768px) {
     max-width: 40%;
     margin: 0 auto;
   }
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

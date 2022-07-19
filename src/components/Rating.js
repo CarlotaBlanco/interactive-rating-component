@@ -81,9 +81,9 @@ function Rating(props) {
           />
         </div>
       </div>
-      <Link to='/thankyou'>
-        <button className='modal__submit-button'>Submit</button>
-      </Link>
+      <div className='modal__submit-button'>
+        <Link to='/thankyou'>Submit</Link>
+      </div>
     </section>
   );
 }
