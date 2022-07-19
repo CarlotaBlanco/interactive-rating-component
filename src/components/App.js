@@ -1,6 +1,8 @@
 import '../styles/App.scss';
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Rating from './Rating';
+import Thankyou from './Thankyou';
 
 function App() {
   const [number, setNumber] = useState(0);
@@ -11,7 +13,10 @@ function App() {
 
   return (
     <>
-      <Rating savedValue={savedValue}></Rating>;
+      <Routes>
+        <Route path='/' element={<Rating savedValue={savedValue}></Rating>} />
+        <Route path='/thankyou' element={<Thankyou></Thankyou>} />
+      </Routes>
     </>
   );
 }
