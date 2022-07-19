@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    <>
+    <main>
       <Routes>
         <Route path='/' element={<Rating savedValue={savedValue}></Rating>} />
 
@@ -26,7 +26,7 @@ function App() {
           <Route path='*' element={<Rating savedValue={savedValue}></Rating>} />
         )}
       </Routes>
-    </>
+    </main>
   );
 }
 
