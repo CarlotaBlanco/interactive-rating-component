@@ -1,6 +1,5 @@
 import '../styles/App.scss';
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
 import Rating from './Rating';
 import Thankyou from './Thankyou';
 
@@ -13,19 +12,8 @@ function App() {
 
   return (
     <main>
-      <Routes>
-        <Route path='/' element={<Rating savedValue={savedValue}></Rating>} />
-
-        {number !== 0 && (
-          <Route
-            path='/thankyou'
-            element={<Thankyou number={number}></Thankyou>}
-          />
-        )}
-        {number === 0 && (
-          <Route path='*' element={<Rating savedValue={savedValue}></Rating>} />
-        )}
-      </Routes>
+      {number !== 0 && <Thankyou number={number}></Thankyou>}
+      {number === 0 && <Rating savedValue={savedValue}></Rating>}
     </main>
   );
 }
