@@ -14,7 +14,9 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmit(true);
+    if (number > 0) {
+      setSubmit(true);
+    }
   };
 
   return (

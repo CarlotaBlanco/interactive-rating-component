@@ -52,23 +52,18 @@ $orange: hsl(25, 97%, 53%);
   &__submit-button {
     text-transform: uppercase;
     text-align: center;
-
+    color: $white;
     background-color: $orange;
     border: 0;
     padding: 5%;
     margin: 5% 0 2%;
     border-radius: 99em;
     letter-spacing: 0.3em;
-    a {
-      color: $white;
-      text-decoration: none;
-    }
+    width: 100%;
   }
   &__submit-button:active {
     background-color: $white;
-    a {
-      color: $orange;
-    }
+    color: $orange;
   }
 
   &__thanks {
