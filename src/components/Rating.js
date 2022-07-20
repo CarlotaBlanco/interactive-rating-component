@@ -1,9 +1,10 @@
 import star from '../images/icon-star.svg';
-import { Link } from 'react-router-dom';
+
 function Rating(props) {
   const handleSaveValue = (event) => {
     props.savedValue(event.target.value);
   };
+
   return (
     <section className='modal'>
       <button className='modal__star-button'>
@@ -81,9 +82,9 @@ function Rating(props) {
           />
         </div>
       </div>
-      <div className='modal__submit-button'>
-        <Link to='/thankyou'>Submit</Link>
-      </div>
+      <button onClick={props.handleSubmit} className='modal__submit-button'>
+        Submit
+      </button>
     </section>
   );
 }

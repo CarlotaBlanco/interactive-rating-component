@@ -1,19 +1,31 @@
 import '../styles/App.scss';
 import { useState } from 'react';
+
 import Rating from './Rating';
 import Thankyou from './Thankyou';
 
 function App() {
   const [number, setNumber] = useState(0);
+  const [submit, setSubmit] = useState(false);
 
-  const savedValue = (value) => {
+  const handleSaveValue = (value) => {
     setNumber(value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmit(true);
   };
 
   return (
     <main>
-      {number !== 0 && <Thankyou number={number}></Thankyou>}
-      {number === 0 && <Rating savedValue={savedValue}></Rating>}
+      {submit && <Thankyou number={number}></Thankyou>}
+      {!submit && (
+        <Rating
+          savedValue={handleSaveValue}
+          handleSubmit={handleSubmit}
+        ></Rating>
+      )}
     </main>
   );
 }
